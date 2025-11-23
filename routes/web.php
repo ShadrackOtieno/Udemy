@@ -8,7 +8,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/admin/login',[AdminController::class, 'login'])->name('admin.login');
+Route::middleware(['auth','verified','role:admin'])->prefix('admin')->name('admin')->group(function(){
+    Route::get('/dashboard',[AdminController::class, 'dashboard'])->name('admin.dashboard');
+});
+
+Route::post('/admin/login',[AdminController::class, 'login'])->name('admin.login');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
