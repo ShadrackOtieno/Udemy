@@ -8,11 +8,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(['auth','verified','role:admin'])->prefix('admin')->name('admin')->group(function(){
+Route::middleware(['auth','verified','role:admin'])->prefix('admin')->name('admin.')->group(function(){
     Route::get('/dashboard',[AdminController::class, 'dashboard'])->name('admin.dashboard');
+    Route::post('/logout',[AdminController::class, 'destroy'])->name('logout');
 });
 
-Route::post('/admin/login',[AdminController::class, 'login'])->name('admin.login');
+Route::get('/admin/login',[AdminController::class, 'login'])->name('admin.login');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

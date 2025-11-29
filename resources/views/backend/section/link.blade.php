@@ -24,3 +24,9 @@
 <!-- App CSS -->
 <link href="{{ asset('backend/assets/css/app.css') }}" rel="stylesheet">
 <link href="{{ asset('backend/assets/css/icons.css') }}" rel="stylesheet">
+<!-- Theme Style CSS -->
+<link rel="stylesheet" href="{{ asset('backend/assets/css/dark-theme.css') }}">
+<link rel="stylesheet" href="{{ asset('backend/assets/css/semi-dark.css') }}">
+<link rel="stylesheet" href="{{ asset('backend/assets/css/header-colors.css') }}">
+<link href="{{ asset('backend/assets/plugins/vectormap/jquery-jvectormap-2.0.2.css') }}" rel="stylesheet">
+

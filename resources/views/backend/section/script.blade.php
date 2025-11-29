@@ -6,10 +6,21 @@
 <script src="{{ asset('backend/assets/plugins/metismenu/js/metisMenu.min.js') }}"></script>
 <script src="{{ asset('backend/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js') }}"></script>
 
+
+<script src="{{ asset('backend/assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js') }}"></script>
+<script src="{{ asset('backend/assets/plugins/vectormap/jquery-jvectormap-world-mill-en.js') }}"></script>
+
+<script src="{{ asset('backend/assets/plugins/chartjs/js/chart.js') }}"></script>
+
+<script src="{{ asset('backend/assets/js/index.js') }}"></script>
+
+
+
+
 <!-- Password show & hide -->
 <script>
-    $(document).ready(function () {
-        $("#show_hide_password a").on('click', function (event) {
+    $(document).ready(function() {
+        $("#show_hide_password a").on('click', function(event) {
             event.preventDefault();
             let input = $('#show_hide_password input');
             let icon = $('#show_hide_password i');
@@ -27,3 +38,7 @@
 
 <!-- app JS -->
 <script src="{{ asset('backend/assets/js/app.js') }}"></script>
+<script>
+    new PerfectScrollbar(".app-container")
+</script>
+
